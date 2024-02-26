@@ -7,7 +7,7 @@ import Button from "./Button";
 import Login from "./Login";
 import Select from "./Select";
 import Signup from "./Signup";
-
+import PostCard from "./PostCard";
 export {
     Header,
     Footer,
@@ -17,6 +17,7 @@ export {
     Button,
     Login,
     Select,
-    Signup
+    Signup,
+    PostCard
 
 }
