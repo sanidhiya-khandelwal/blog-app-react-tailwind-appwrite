@@ -6,6 +6,7 @@ import Input from "./Input";
 import Button from "./Button";
 import Login from "./Login";
 import Select from "./Select";
+import Signup from "./Signup";
 
 export {
     Header,
@@ -15,6 +16,7 @@ export {
     Input,
     Button,
     Login,
-    Select
+    Select,
+    Signup
 
 }
