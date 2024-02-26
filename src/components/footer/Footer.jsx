@@ -3,7 +3,7 @@ import Container from '../container/Container'
 function Footer() {
     return (
         <Container className="">
-            <footer className='bg-gray-400 py-2 px-1 fixed bottom-0 left-10 right-10'>
+            <footer className='bg-gray-400 py-2 px-1'>
                 <div className='flex flex-row flex-wrap gap-4 text-[0.8rem] sm:text-[0.9rem] justify-between text-gray-700'>
                     <ul>
                         <li className='cursor-pointer hover:underline hover:underline-offset-2'>About us</li>
