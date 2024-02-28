@@ -10,8 +10,8 @@ function PostPage() {
     const navigate = useNavigate();
     const { slug } = useParams();
     const userData = useSelector(state => state.auth.userData)
-    console.log("userData", userData);
-    const isAuthor = post && userData ? post.userId === userData.userData.$id : false;
+
+    const isAuthor = post && userData ? (post.userId === (userData.userData.$id)) : false;
 
 
     useEffect(() => {
