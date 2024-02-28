@@ -5,11 +5,13 @@ import HomePage from './HomePage';
 import AddPostPage from './AddPostPage';
 import AllPostsPage from './AllPostsPage'
 import PostPage from './PostPage'
+import EditPost from './EditPost';
 export {
     LoginPage,
     SignupPage,
     HomePage,
     AddPostPage,
     AllPostsPage,
-    PostPage
+    PostPage,
+    EditPost
 }
