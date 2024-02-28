@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import { AuthLayout } from './components/index.js'
+import { AuthLayout, PostForm } from './components/index.js'
 import { HomePage, LoginPage, SignupPage } from './pages/pagesIndex.js'
 import { Provider } from 'react-redux'
 import store from './store/store.js'
@@ -31,6 +31,14 @@ const router = createBrowserRouter([
         element: (
           <AuthLayout authentication={false}>
             <SignupPage />
+          </AuthLayout>
+        )
+      },
+      {
+        path: "/add-post",
+        element: (
+          <AuthLayout authentication={true}>
+            <PostForm />
           </AuthLayout>
         )
       }
