@@ -4,6 +4,7 @@ import { Container, PostCard } from '../components/index'
 
 function AllPostsPage() {
     const [posts, setPosts] = useState([]);
+
     useEffect(() => {
         service.getAllPosts([]).then(posts => {
             if (posts) {
