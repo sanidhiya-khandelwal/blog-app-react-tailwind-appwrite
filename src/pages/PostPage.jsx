@@ -59,16 +59,11 @@ function PostPage() {
                     )
                 }
             </div>
-            <div className='text-[1.1rem] p-2 flex flex-wrap'>
-                <div className='w-2/3'>
-                    <h2><b>Title :</b> {post.title}</h2>
-                    <h2><b>Category : </b>{post.blogCategory}</h2>
-                    <h2><b>Status : </b>{post.status}</h2>
-                    <h2><b className=''>Content : </b>{parse(post.content)}</h2>
-                </div>
-                <div className=' w-1/3'>
-
-                </div>
+            <div className='text-[1.1rem] p-2'>
+                <h2><b>Title :</b> {post.title}</h2>
+                <h2><b>Category : </b>{post.blogCategory}</h2>
+                <h2><b>Status : </b>{post.status}</h2>
+                <h2><b className=''>Content : </b>{parse(post.content)}</h2>
             </div>
         </Container>
     ) : null;
