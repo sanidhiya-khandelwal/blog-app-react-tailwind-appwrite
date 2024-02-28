@@ -7,8 +7,8 @@ import { Container, LogoutButton } from '../index'
 
 function Header() {
 
-    // const authStatus = useSelector((state) => state.auth.status) //check for "auth", name same as what we gave in authSlice // name: "auth", check by giving different name
-    const authStatus = true;
+    const authStatus = useSelector((state) => state.auth.status) //check for "auth", name same as what we gave in authSlice // name: "auth", check by giving different name
+
     const navigate = useNavigate();
 
     const navItems = [
