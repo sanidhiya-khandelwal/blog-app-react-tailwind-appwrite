@@ -119,7 +119,7 @@ function PostForm({ post }) { //log post
                     options={["Personal", "Lifestyle", "Fashion", "Travel", "Food"]}
                     label="Category :  : "
                     className="mb-10"
-                    {...register("category", { required: true })}
+                    {...register("blogCategory", { required: true })}
                 />
                 <Select
                     options={["active", "inactive"]}
