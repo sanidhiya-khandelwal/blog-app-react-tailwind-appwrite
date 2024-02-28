@@ -14,7 +14,7 @@ function AllPostsPage() {
     }, [])
     return (
         <Container>
-            <div className='flex flex-wrap gap-5 sm:gap-10'>
+            <div className='flex flex-wrap justify-around sm:justify-between gap-5 sm:gap-10'>
                 {
                     posts.map(post => (
                         <div key={post.$id}>
