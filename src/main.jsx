@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { AuthLayout, PostForm } from './components/index.js'
-import { HomePage, LoginPage, SignupPage, AllPostsPage } from './pages/pagesIndex.js'
+import { HomePage, LoginPage, SignupPage, AllPostsPage, PostPage } from './pages/pagesIndex.js'
 import { Provider } from 'react-redux'
 import store from './store/store.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
@@ -49,6 +49,10 @@ const router = createBrowserRouter([
             <AllPostsPage />
           </AuthLayout>
         )
+      },
+      {
+        path: "post/:slug",
+        element: <PostPage />
       }
     ]
   },
