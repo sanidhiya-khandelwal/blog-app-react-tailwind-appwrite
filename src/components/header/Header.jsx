@@ -41,7 +41,7 @@ function Header() {
 
     return (
         <Container>
-            <header className='flex justify-between py-2 sm:h-[3rem]'>
+            <header className='flex justify-between py-4 mb-2 sm:h-[3rem]'>
                 <div className='cursor-pointer'>
                     <Link to="/">
                         <img className='w-[1.5rem] h-[1.5rem] sm:w-[2rem] sm:h-[2rem] rounded-md' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAHXPluq6GtTRPDIHRv5kJPy86uFjp5sO7hg&usqp=CAU" alt="logo" />
