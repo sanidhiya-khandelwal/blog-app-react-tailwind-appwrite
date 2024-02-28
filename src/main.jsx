@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { AuthLayout, PostForm } from './components/index.js'
-import { HomePage, LoginPage, SignupPage } from './pages/pagesIndex.js'
+import { HomePage, LoginPage, SignupPage, AllPostsPage } from './pages/pagesIndex.js'
 import { Provider } from 'react-redux'
 import store from './store/store.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
@@ -39,6 +39,14 @@ const router = createBrowserRouter([
         element: (
           <AuthLayout authentication={true}>
             <PostForm />
+          </AuthLayout>
+        )
+      },
+      {
+        path: "all-posts",
+        element: (
+          <AuthLayout>
+            <AllPostsPage />
           </AuthLayout>
         )
       }
