@@ -35,7 +35,7 @@ function App() {
     </div>
   ) : (
     <div className='w-full h-[12rem]'>
-      <img className='m-auto mt-5 h-full' src="./src/assets/spinner.gif" alt="spinner" />
+      <img className='m-auto mt-5 h-full' src="/spinner.gif" alt="spinner" />
     </div>
   )
 }

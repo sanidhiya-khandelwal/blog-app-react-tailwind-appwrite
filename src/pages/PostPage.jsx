@@ -33,7 +33,7 @@ function PostPage() {
     if (!post) {
         return (
             <div className='flex items-center justify-center'>
-                <img className='m-auto mt-5 h-full' src="/src/assets/spinner.gif" alt="spinner" />
+                <img className='m-auto mt-5 h-full' src="/spinner.gif" alt="spinner" />
             </div>
         )
     }

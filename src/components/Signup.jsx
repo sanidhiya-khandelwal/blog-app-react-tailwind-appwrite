@@ -14,11 +14,9 @@ function Signup() {
     const { register, handleSubmit } = useForm();
 
     const signUpFunc = async (data) => {
-        console.log(data);
         setError("")
         try {
             const session = await authService.createAccount(data);
-            console.log("Session", session);
             if (session) {
                 const userData = await authService.getCurrentUser();
                 if (userData) {
@@ -27,7 +25,6 @@ function Signup() {
                 }
             }
         } catch (error) {
-            console.log("error", error);
             setError(error.message)
         }
     }

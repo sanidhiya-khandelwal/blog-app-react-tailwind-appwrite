@@ -4,6 +4,7 @@ import { Input, Button, Select, RTE, Container } from '../index';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+// import {Container} from '../../assets/'
 
 function PostForm({ post }) { //log post
 
@@ -90,7 +91,7 @@ function PostForm({ post }) { //log post
 
     if (loader) {
         return <div className='flex items-center justify-center'>
-            <img className='m-auto mt-5 h-full' src="/src/assets/spinner.gif" alt="spinner" />
+            <img className='m-auto mt-5 h-full' src="/spinner.gif" alt="spinner" />
         </div>
     }
 
