@@ -79,9 +79,9 @@ function PostForm({ post }) { //log post
     }, [watch, slugTransform, setValue])
 
     return (
-        <Container className='py-5'>
-            <form onSubmit={handleSubmit(submit)} className='flex flex-wrap border py-5'>
-                <div className='w-2/3 px-2'>
+        <Container className='py-5 bg-slate-100'>
+            <form onSubmit={handleSubmit(submit)} className='flex flex-wrap border py-5 px-1'>
+                <div className='md:w-2/3 px-2'>
                     <Input
                         label="Title : "
                         placeholder="Enter title"
@@ -99,7 +99,7 @@ function PostForm({ post }) { //log post
                     />
                     <RTE label="Description : " name="content" control={control} defaultValue={getValues("content")} />
                 </div>
-                <div className='w-1/3 px-2'>
+                <div className='md:w-1/3 px-2'>
                     <Input
                         label="Featured Image : "
                         type="file"

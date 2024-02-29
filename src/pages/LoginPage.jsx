@@ -3,7 +3,7 @@ import { Login } from '../components/index'
 
 function LoginPage() {
     return (
-        <div>
+        <div className='px-5 mt-10'>
             <Login />
         </div>
     )

@@ -40,31 +40,29 @@ function Header() {
     ]
 
     return (
-        <Container>
-            <header className='flex justify-between py-4 mb-2 sm:h-[3rem]'>
-                <div className='cursor-pointer'>
-                    <Link to="/">
-                        <img className='w-[1.5rem] h-[1.5rem] sm:w-[2rem] sm:h-[2rem] rounded-md' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAHXPluq6GtTRPDIHRv5kJPy86uFjp5sO7hg&usqp=CAU" alt="logo" />
-                    </Link>
-                </div>
-                <div className='flex gap-2 flex-wrap'>
-                    {
-                        navItems.map((item) => (
-                            item.active ? (
-                                <button key={item.name}
-                                    onClick={() => navigate(item.slug)}
-                                    className="text-[0.8rem] rounded-md px-3 bg-black sm:rounded-lg sm:px-2 sm:py-1 text-white"
-                                >
-                                    {item.name}
-                                </button>) : null
-                        ))
-                    }
-                    {
-                        authStatus ? <LogoutButton /> : null
-                    }
-                </div>
-            </header>
-        </Container>
+        <header className='flex justify-between items-center py-5 px-5 mb-2 sm:h-[3rem] bg-slate-100 shadow-md'>
+            <div className='cursor-pointer'>
+                <Link to="/">
+                    <h1 className=' px-3 bg-slate-500 text-white text-[1.2rem] sm:text-2xl rounded-md'>A</h1>
+                </Link>
+            </div>
+            <div className='flex gap-2 flex-wrap'>
+                {
+                    navItems.map((item) => (
+                        item.active ? (
+                            <button key={item.name}
+                                onClick={() => navigate(item.slug)}
+                                className="text-[0.8rem] rounded-md px-3 py-1 bg-black sm:rounded-lg sm:px-3 sm:py-[0.3rem]  text-white"
+                            >
+                                {item.name}
+                            </button>) : null
+                    ))
+                }
+                {
+                    authStatus ? <LogoutButton /> : null
+                }
+            </div>
+        </header>
     )
 }
 

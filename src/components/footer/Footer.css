@@ -1,0 +1,6 @@
+.custom-shadow {
+    --tw-bg-opacity: 1;
+    background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+    box-shadow: 0 -2px 6px 0px rgba(0, 0, 0, 0.1);
+    /* Adjust the values based on your design */
+}

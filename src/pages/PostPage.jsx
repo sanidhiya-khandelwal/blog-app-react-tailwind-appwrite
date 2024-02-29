@@ -42,15 +42,15 @@ function PostPage() {
     return post ? (
         <Container>
             <div>
-                <div className=' bg-slate-100 shadow-lg w-full h-[25rem] flex mt-10'>
+                <div className='shadow-lg w-full h-[25rem] rounded-xl flex mt-10'>
                     <img
-                        className='relative h-full'
+                        className='relative h-full rounded-xl'
                         src={service.getFilePreview(post.featuredImage)}
                         alt={post.title} />
                 </div>
                 {
                     isAuthor && (
-                        <div className='absolute right-7 top-24 sm:right-16 sm:top-28'>
+                        <div className='absolute right-7 top-32 sm:right-16 sm:top-28'>
                             <Link to={`/edit-post/${post.$id}`}>
                                 <Button bgColor="bg-green-500" className='mr-3 '>Edit</Button>
                             </Link>
@@ -59,7 +59,7 @@ function PostPage() {
                     )
                 }
             </div>
-            <div className='text-[1.1rem] p-2'>
+            <div className='text-[1rem] p-2 mt-5'>
                 <h2><b>Title :</b> {post.title}</h2>
                 <h2><b>Category : </b>{post.blogCategory}</h2>
                 <h2><b>Status : </b>{post.status}</h2>

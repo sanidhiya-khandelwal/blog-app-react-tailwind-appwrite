@@ -32,7 +32,7 @@ function Signup() {
         }
     }
     return (
-        <div className='w-[50%] m-auto mt-10 rounded-md bg-gray-400 py-5'>
+        <div className='py-5 sm:w-[50%] m-auto mt-10  bg-gray-100 rounded-xl'>
             <div className='flex flex-col items-center'>
                 <h1 className='font-semibold text-2xl'>Sign up to create account</h1>
                 <h5 className='mt-1'>Already have an account? <Link to="/login" className='underline underline-offset-2'>Sign In</Link> </h5>

@@ -31,13 +31,13 @@ function Login() {
     }
     return (
         <div className='flex items-center justify-center w-full mt-5 sm:mt-7 Md:mt-10 '>
-            <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl py-3 sm:p-10 border border-black/10`}>
+            <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl py-3 sm:p-10`}>
                 <h2 className="text-center text-xl sm:text-2xl font-bold leading-tight">Sign in to your account</h2>
                 <p className="mt-2 text-center text-base text-black/60">
                     Don&apos;t have any account?&nbsp;
                     <Link
                         to="/signup"
-                        className="font-medium text-primary transition-all duration-200 hover:underline"
+                        className="font-medium text-primary transition-all duration-200 underline underline-offset-2"
                     >
                         Sign Up
                     </Link>
