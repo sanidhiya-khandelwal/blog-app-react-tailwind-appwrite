@@ -34,8 +34,8 @@ function App() {
       <Footer />
     </div>
   ) : (
-    <div>
-      <h1>loading....</h1>
+    <div className='w-full h-[12rem]'>
+      <img className='m-auto mt-5 h-full' src="./src/assets/spinner.gif" alt="spinner" />
     </div>
   )
 }
