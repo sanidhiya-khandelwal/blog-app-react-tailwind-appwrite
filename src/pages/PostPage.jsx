@@ -29,6 +29,15 @@ function PostPage() {
         }
     }, [slug, navigate]);
 
+    //waiting for the page to fetch data
+    if (!post) {
+        return (
+            <div className='flex items-center justify-center'>
+                <img className='m-auto mt-5 h-full' src="/src/assets/spinner.gif" alt="spinner" />
+            </div>
+        )
+    }
+
     const deletePost = () => {
         service.deletePost(post.$id).then(status => {
             if (status) {
@@ -41,10 +50,10 @@ function PostPage() {
 
     return post ? (
         <Container>
-            <div>
-                <div className='shadow-lg w-full h-[25rem] rounded-xl flex mt-10'>
+            <div >
+                <div className='w-full h-[25rem] flex mt-10'>
                     <img
-                        className='relative h-full rounded-xl'
+                        className='relative w-auto h-full rounded-xl object-cover'
                         src={service.getFilePreview(post.featuredImage)}
                         alt={post.title} />
                 </div>

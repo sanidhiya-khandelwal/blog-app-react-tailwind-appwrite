@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import service from '../../appwrite/config';
 import { Input, Button, Select, RTE, Container } from '../index';
 import { useForm } from 'react-hook-form';
@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 function PostForm({ post }) { //log post
+
+    const [loader, setLoader] = useState(true)
 
     const { register, handleSubmit, watch, setValue, control, getValues } = useForm({
         defaultValues: {
@@ -18,6 +20,14 @@ function PostForm({ post }) { //log post
     })
     const navigate = useNavigate();
     const userData = useSelector((state) => state.auth.userData) //log userData
+
+    useEffect(() => {
+        const delay = setTimeout(() => {
+            setLoader(false)
+        }, 2000);
+
+        return () => clearTimeout(delay)
+    }, [])
 
 
 
@@ -77,6 +87,13 @@ function PostForm({ post }) { //log post
             subscription.unsubscribe();
         }
     }, [watch, slugTransform, setValue])
+
+    if (loader) {
+        return <div className='flex items-center justify-center'>
+            <img className='m-auto mt-5 h-full' src="/src/assets/spinner.gif" alt="spinner" />
+        </div>
+    }
+
 
     return (
         <Container className='py-5 bg-slate-100'>
