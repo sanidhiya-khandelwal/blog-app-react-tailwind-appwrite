@@ -17,10 +17,13 @@ function HomePage() {
     //waiting for the page to fetch data
     if (posts.length === 0) {
         return (
-            <div className='flex items-center justify-center'>
-                <img className='m-auto mt-5 h-full' src="/spinner.gif" alt="spinner" />
+            <div className="flex flex-wrap w-full h-[60vh] items-center justify-center">
+                <h1 className="text-2xl font-bold hover:text-gray-500">
+                    Login to read posts
+                </h1>
             </div>
         )
+
     }
     return (
         <Container>
