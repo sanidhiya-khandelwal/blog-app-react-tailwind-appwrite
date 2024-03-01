@@ -4,11 +4,9 @@ import { Input, Button, Select, RTE, Container } from '../index';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-// import {Container} from '../../assets/'
 
 function PostForm({ post }) { //log post
 
-    const [loader, setLoader] = useState(true)
 
     const { register, handleSubmit, watch, setValue, control, getValues } = useForm({
         defaultValues: {
@@ -21,14 +19,6 @@ function PostForm({ post }) { //log post
     })
     const navigate = useNavigate();
     const userData = useSelector((state) => state.auth.userData) //log userData
-
-    useEffect(() => {
-        const delay = setTimeout(() => {
-            setLoader(false)
-        }, 2000);
-
-        return () => clearTimeout(delay)
-    }, [])
 
 
 
@@ -89,11 +79,7 @@ function PostForm({ post }) { //log post
         }
     }, [watch, slugTransform, setValue])
 
-    if (loader) {
-        return <div className='flex items-center justify-center'>
-            <img className='m-auto mt-5 h-full' src="/spinner.gif" alt="spinner" />
-        </div>
-    }
+
 
 
     return (
