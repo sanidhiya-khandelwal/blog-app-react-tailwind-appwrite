@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import service from '../appwrite/config';
 import { Container, PostCard } from '../components/index'
+import { getPostsReducer } from '../store/postsSlice';
+import { useSelector } from 'react-redux';
 
 function AllPostsPage() {
     const [posts, setPosts] = useState([]);
-
+    const allPosts = useSelector(state => state.posts.postsData)
     useEffect(() => {
-        service.getAllPosts([]).then(posts => {
-            if (posts) {
-                setPosts(posts.documents)
-            }
-        })
-    }, [])
+        if (allPosts) {
+            setPosts(allPosts.documents)
+        }
+    }, [allPosts])
 
     //waiting for the page to fetch data
     if (posts.length === 0) {

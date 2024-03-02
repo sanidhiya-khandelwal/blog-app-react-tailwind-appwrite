@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import service from '../appwrite/config'
 import { PostCard, Container } from '../components/index'
+import { useSelector } from 'react-redux';
 
 function HomePage() {
     const [posts, setPosts] = useState([]);
+    const allPosts = useSelector(state => state.posts.postsData)
 
     useEffect(() => {
-        service.getAllPosts([])
-            .then(posts => {
-                if (posts) {
-                    setPosts(posts.documents)
-                }
-            })
-    }, [])
+        if (allPosts) {
+            setPosts(allPosts.documents)
+        }
+    }, [allPosts])
 
-    //waiting for the page to fetch data
+    //runs when user is not logged in
     if (posts.length === 0) {
         return (
             <div className="flex flex-wrap w-full h-[60vh] items-center justify-center">
