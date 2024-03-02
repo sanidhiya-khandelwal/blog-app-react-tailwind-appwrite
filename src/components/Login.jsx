@@ -3,9 +3,11 @@ import { Input, Button } from "./index"
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import authService from '../appwrite/auth'
+import service from '../appwrite/config'
 import { useDispatch } from 'react-redux'
 import { useNavigate, Link } from 'react-router-dom'
 import { login as Authlogin } from '../store/authSlice'
+import { getPostsReducer } from '../store/postsSlice'
 
 function Login() {
     const dispatch = useDispatch();
@@ -22,6 +24,15 @@ function Login() {
                 const userData = await authService.getCurrentUser();
                 if (userData) {
                     dispatch(Authlogin(userData))
+
+                    const posts = await service.getAllPosts([])
+                    if (posts) {
+                        dispatch(getPostsReducer(posts))
+
+                    }
+                    else {
+                        console.log("Appwrite service :: getAllPost :: error ")
+                    }
                 }
                 navigate("/")
             }
