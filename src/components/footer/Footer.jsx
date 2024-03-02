@@ -2,7 +2,7 @@ import React from 'react'
 import './Footer.css'
 function Footer() {
     return (
-        <footer className='custom-shadow mt-10 py-7 px-5'>
+        <footer className='custom-shadow mt-[6rem] sm:mt-[2.6rem] py-7 px-5'>
             <div className='flex flex-row flex-wrap gap-4 text-[0.8rem] sm:text-[0.9rem] justify-between text-slate-600'>
                 <ul>
                     <li className='cursor-pointer hover:underline hover:underline-offset-2'>About us</li>
