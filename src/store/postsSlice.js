@@ -12,13 +12,9 @@ const postsSlice = createSlice({
         getPostsReducer: (state, action) => {
             state.postsStatus = true;
             state.postsData = action.payload;
-        },
-        removePostsReducer: (state, action) => {
-            state.postsStatus = false;
-            state.postsData = null;
         }
     }
 })
 
 export const { getPostsReducer, removePostsReducer } = postsSlice.actions;
-export default postsSlice.reducer
+export default postsSlice.reducer;

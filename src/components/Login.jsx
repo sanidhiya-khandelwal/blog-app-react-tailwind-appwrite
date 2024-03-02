@@ -26,6 +26,7 @@ function Login() {
                     dispatch(Authlogin(userData))
 
                     const posts = await service.getAllPosts([])
+
                     if (posts) {
                         dispatch(getPostsReducer(posts))
 

@@ -2,8 +2,8 @@ import React from 'react'
 import authService from '../../appwrite/auth';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { logout } from '../../store/authSlice'
-import { removePostsReducer } from '../../store/postsSlice';
+import { logout } from '../../store/authSlice';
+import { getPostsReducer } from '../../store/postsSlice';
 function LogoutButton() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -11,7 +11,7 @@ function LogoutButton() {
     const logoutHandler = () => {
         authService.logout().then(() => {
             dispatch(logout());
-            dispatch(removePostsReducer())
+            dispatch(getPostsReducer(null))
             navigate('/login');
         })
     }
